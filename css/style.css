@@ -3715,7 +3715,7 @@ li {
   padding: 10px 0;
 }
 .sticky-header .logo img {
-  
+  max-height: 40px;
 }
 .sticky-header .nav-outer {
   position: relative;
@@ -11355,7 +11355,7 @@ li {
 @media (max-width: 998px) {
   .fmog {
     margin-bottom: 0;
-    scale: 7;
+    scale:;
   }
 }
 
