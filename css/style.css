@@ -11,8 +11,8 @@
 :root {
   --theme-color-light: #ffffff;
   --theme-color-dark: #000000;
-  --theme-color1: #17bb17;
-  --theme-color2: #00affe;
+  --theme-color2: #ccca91;
+  --theme-color1: #00affe;
   --text-color: #54595f;
   --headings-color: #000000;
   --link-color: var(--theme-color-dark);
@@ -83,7 +83,7 @@
 }
 ::-webkit-scrollbar-thumb {
   display: block;
-  background-color: #17bb17;
+  background-color: var(--theme-color1);
   border-radius: 10px;
 }
 ::-moz-input-placeholder {
@@ -445,7 +445,7 @@ li {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: rgb(226, 191, 191);
+  background: white;
 }
 .preloader .tj-header-btn {
   position: absolute;
@@ -3715,7 +3715,7 @@ li {
   padding: 10px 0;
 }
 .sticky-header .logo img {
-  max-height: 40px;
+  
 }
 .sticky-header .nav-outer {
   position: relative;
@@ -5737,7 +5737,7 @@ li {
   padding: 25px 65px 30px 115px;
   width: 100%;
   max-width: 398px;
-  background: var(--theme-color2);
+  background: var(--theme-color1);
   min-height: 120px;
 }
 @media (max-width: 991.98px) {
@@ -6592,6 +6592,16 @@ li {
   position: relative;
   padding-right: 85px;
 }
+
+.ttm {
+  margin-top: 200px;
+}
+
+@media (max-width:998px) {
+  .ttm {
+    margin-top: 50px;
+  }
+}
 @media (max-width: 1199.98px) {
   .about-section-two .content-column .inner-column {
     padding-right: 0;
@@ -6620,6 +6630,7 @@ li {
   line-height: 24px;
   left: 25px;
   font-size: 14px;
+  color: var(--theme-color2);
 }
 .about-section-two .image-column {
   margin-bottom: 50px;
@@ -8548,12 +8559,12 @@ li {
   transition: all 300ms ease;
 }
 .accordion-box .block .acc-btn.active {
-  color: var(--theme-color1);
+  color: var(--theme-color2);
 }
 .accordion-box .block .acc-btn.active .icon {
   -webkit-transform: scale(-1) rotate(180deg);
   transform: scale(-1) rotate(180deg);
-  color: var(--theme-color1);
+  color: var(--theme-color2);
 }
 .accordion-box .block .acc-content {
   position: relative;
@@ -11338,8 +11349,14 @@ li {
 
 .fmog {
   scale: 6;
-  margin-bottom: 50px;
-  margin-top: -20px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 998px) {
+  .fmog {
+    margin-bottom: 0;
+    scale: 7;
+  }
 }
 
 .flog {
