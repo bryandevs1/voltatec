@@ -1,0 +1,17 @@
+ name: FTP Test
+ on:
+   push:
+     branches:
+      - main
+ jobs:
+   ci:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+       - name: FTP-Deploy-Action
+         uses: SamKirkland/FTP-Deploy-Action@3.1.1
+         with:
+           ftp-server: ${{ secrets.SFTP_SERVER }}
+           ftp-username: ${{ secrets.FTP_USERNAME }}
+           ftp-password: ${{ secrets.FTP_PASSWORD }}
+           local-dir: toupload
