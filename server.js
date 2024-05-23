@@ -18,12 +18,12 @@ app.post("/sendmail", (req, res) => {
 
   // Create a transporter object using your SMTP service credentials
   const transporter = nodemailer.createTransport({
-    host: "smtp.voltatec-solar.ng", // Replace with your SMTP server
+    host: "mail.voltatec-solar.ng", // Replace with your SMTP server
     port: 465, // Usually 587 or 465 for secure
     secure: true, // true for 465, false for other ports
     auth: {
       user: "contact@voltatec-solar.ng", // Your custom email address
-      pass: "Mike@123", // Your email password
+      pass: "Micheal@123", // Your email password
     },
     tls: {
       rejectUnauthorized: false, // Allow self-signed certificates
@@ -41,9 +41,11 @@ app.post("/sendmail", (req, res) => {
   // Send email
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      return res.status(500).send(error.toString());
+      return res
+        .status(500)
+        .json({ message: "Failed to send email", error: error.toString() });
     }
-    res.send("Email sent successfully!");
+    res.json({ message: "Email sent successfully!" });
   });
 });
 

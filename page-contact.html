@@ -11,6 +11,11 @@
       type="text/css"
     />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+      rel="stylesheet"
+    />
+
+    <link
       href="plugins/revolution/css/layers.css"
       rel="stylesheet"
       type="text/css"
@@ -86,7 +91,7 @@
               <a href="tel:+92(8800)9806" class="info-btn">
                 <i class="icon fa fa-phone"></i>
                 <small>Make a Call</small>
-                <strong>+234 810 997 3950</strong>
+                <strong>+234 803 881 6783</strong>
               </a>
             </div>
           </div>
@@ -145,7 +150,7 @@
                 <i class="icon lnr-icon-phone-handset"></i>
                 <span class="title">Call Now</span>
                 <div class="text">
-                  <a href="tel:+92880098670">+234 8109973950</a>
+                  <a href="tel:+2348038816783">+234 8038816783</a>
                 </div>
               </li>
               <li>
@@ -251,95 +256,149 @@
         </div>
       </section>
 
-<section class="contact-details">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-7 col-lg-6">
-        <div class="sec-title">
-          <span class="sub-title">Send us email</span>
-          <h2>Feel free to write</h2>
-        </div>
-
-        <form id="contact_form" name="contact_form" action="/sendmail" method="post">
+      <section class="contact-details">
+        <div class="container">
           <div class="row">
-            <div class="col-sm-6">
-              <div class="mb-3">
-                <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required />
+            <div class="col-xl-7 col-lg-6">
+              <div class="sec-title">
+                <span class="sub-title">Send us email</span>
+                <h2>Feel free to write</h2>
               </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="mb-3">
-                <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email" required />
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="mb-3">
-                <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject" required />
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="mb-3">
-                <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone" required />
-              </div>
-            </div>
-          </div>
-          <div class="mb-3">
-            <textarea name="form_message" class="form-control required" rows="7" placeholder="Enter Message" required></textarea>
-          </div>
-          <div class="mb-5">
-            <input name="form_botcheck" class="form-control" type="hidden" value="" />
-            <button type="submit" class="theme-btn btn-style-one mb-3 mb-sm-0" data-loading-text="Please wait...">
-              <span class="btn-title">Send message</span>
-            </button>
-          </div>
-        </form>
-      </div>
-      <div class="col-xl-5 col-lg-6">
-        <div class="contact-details__right">
-          <div class="sec-title">
-            <span class="sub-title">Need any help?</span>
-            <h2>Get in touch with us</h2>
-            <div class="text">
-              Have questions, feedback, or just want to say hello? Drop us a line! We're here to help and eager to hear from you. Fill out the form below or reach out directly via email or phone. Your satisfaction is our priority, and we're committed to providing the best support possible. Let's connect!
-            </div>
-          </div>
-          <ul class="list-unstyled contact-details__info">
-            <li>
-              <div class="icon">
-                <span class="lnr-icon-phone-plus"></span>
-              </div>
-              <div class="text">
-                <h6>Have any question?</h6>
-                <a href="tel:980089850"><span>Reach us at</span> +234 810 997 3950</a>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <span class="lnr-icon-envelope1"></span>
-              </div>
-              <div class="text">
-                <h6>Shoot us an email</h6>
-                <a href="mailto:contact@voltatec-solar.ng">contact@voltatec-solar.ng</a>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <span class="lnr-icon-location"></span>
-              </div>
-              <div class="text">
-                <h6>Visit anytime</h6>
-                <span>House 22 Franklin Street Urban Prime 2 Lavadia Estate, Lagos</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
+              <form
+                id="contact_form"
+                name="contact_form"
+                action="/sendmail"
+                method="post"
+              >
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <input
+                        name="form_name"
+                        class="form-control"
+                        type="text"
+                        placeholder="Enter Name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <input
+                        name="form_email"
+                        class="form-control required email"
+                        type="email"
+                        placeholder="Enter Email"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <input
+                        name="form_subject"
+                        class="form-control required"
+                        type="text"
+                        placeholder="Enter Subject"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="mb-3">
+                      <input
+                        name="form_phone"
+                        class="form-control"
+                        type="text"
+                        placeholder="Enter Phone"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    name="form_message"
+                    class="form-control required"
+                    rows="7"
+                    placeholder="Enter Message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-5">
+                  <input
+                    name="form_botcheck"
+                    class="form-control"
+                    type="hidden"
+                    value=""
+                  />
+                  <button
+                    type="submit"
+                    class="theme-btn btn-style-one mb-3 mb-sm-0"
+                    data-loading-text="Please wait..."
+                  >
+                    <span class="btn-title">Send message</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col-xl-5 col-lg-6">
+              <div class="contact-details__right">
+                <div class="sec-title">
+                  <span class="sub-title">Need any help?</span>
+                  <h2>Get in touch with us</h2>
+                  <div class="text">
+                    Have questions, feedback, or just want to say hello? Drop us
+                    a line! We're here to help and eager to hear from you. Fill
+                    out the form below or reach out directly via email or phone.
+                    Your satisfaction is our priority, and we're committed to
+                    providing the best support possible. Let's connect!
+                  </div>
+                </div>
+                <ul class="list-unstyled contact-details__info">
+                  <li>
+                    <div class="icon">
+                      <span class="lnr-icon-phone-plus"></span>
+                    </div>
+                    <div class="text">
+                      <h6>Have any question?</h6>
+                      <a href="tel:980089850"
+                        ><span>Reach us at</span> +234 803 881 6783</a
+                      >
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <span class="lnr-icon-envelope1"></span>
+                    </div>
+                    <div class="text">
+                      <h6>Shoot us an email</h6>
+                      <a href="mailto:contact@voltatec-solar.ng"
+                        >contact@voltatec-solar.ng</a
+                      >
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <span class="lnr-icon-location"></span>
+                    </div>
+                    <div class="text">
+                      <h6>Visit anytime</h6>
+                      <span
+                        >House 22 Franklin Street Urban Prime 2 Lavadia Estate,
+                        Lagos</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="map-section">
         <iframe
@@ -412,7 +471,7 @@
                       </li>
                       <li>
                         <i class="fal fa-phone"></i>
-                        <a href="tel:+2348109973950">(+234 810 997 3950)</a>
+                        <a href="tel:+2348038816783">(+234 803 881 6783)</a>
                       </li>
                       <li>
                         <i class="fal fa-envelope"></i>
@@ -537,10 +596,16 @@
     <div class="scroll-to-top scroll-to-target" data-target="html">
       <span class="fa fa-angle-up"></span>
     </div>
+    <div
+      id="toast-container"
+      style="position: fixed; top: 20px; right: 20px; z-index: 1000"
+    ></div>
+
     <script
       data-cfasync="false"
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
+
     <script src="js/jquery.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -583,6 +648,38 @@
           },
         });
       })(jQuery);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contact_form");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          const formData = new FormData(form);
+          const formObject = {};
+          formData.forEach((value, key) => (formObject[key] = value));
+
+          fetch("/sendmail", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formObject),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.message === "Email sent successfully!") {
+                toastr.success(data.message);
+                form.reset(); // Reset the form on success
+              } else {
+                toastr.error(data.message);
+              }
+            })
+            .catch((error) => toastr.error("Failed to send email: " + error));
+        });
+      });
     </script>
   </body>
 </html>
