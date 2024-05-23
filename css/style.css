@@ -5665,6 +5665,7 @@ li {
 
 .centerr {
   display: flex;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
