@@ -11365,14 +11365,13 @@ li {
 @media (max-width: 998px) {
   .fmog {
     margin-bottom: 0;
-    scale:;
   }
 }
 
 .flog {
   width: 50px;
   height: auto;
-  scale: 4;
+  scale: 2.5;
 }
 
 @media (min-width: 998px) {
